@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Табло аэропорта</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="main">
+            <h1 class="main__title visually__hidden">Табло рейсов</h1>
+        </div>
+        <div class="filter">
+            <ul class="filter__flight__list">
+                <li class="flight__type">
+                    <a class="departure" href="#" id="departure">Вылетающие рейсы</a>
+                </li>
+                <li class="flight__type">
+                    <a class="arrival" href="#" id="arrival">Прилетающие рейсы</a>
+                </li>
+                <li class="flight__type">
+                    <a class="delay" href="#" id="delay">Задержанные рейсы</a>
+                </li>
+            </ul>
+            <!--<fieldset class="flight__filter__type">-->
+                <!--<input type=checkbox name="type" value="departures" id="departures" class="type__checkbox visually__hidden">-->
+                <!--<label class="flight__type flight__type__departures" for="departures">Вылетающие рейсы</label>-->
+                <!--<input type="checkbox" name="type" value="arrivals" id="arrivals" class="type__checkbox visually__hidden">-->
+                <!--<label class="flight__type flight__type__arrivals" for="arrivals">Прилетающие рейсы</label>-->
+                <!--<input type="checkbox" name="type" value="delays" id="delays" class="type__checkbox visually__hidden">-->
+                <!--<label class="flight__type flight__type__delays" for="delays">Задерживающие рейсы</label>-->
+            <!--</fieldset>-->
+        </div>
+        <div class="search">
+            <form class="search__form">
+                <input type="text" placeholder="Поиск по номеру рейса">
+                <!--<button type="submit"></button>-->
+            </form>
+        </div>
+        <div class="departure__flights">
+            <table class="departure__flights__table">
+            </table>
+        </div>
+
+    </main>
+    <template id="table__row">
+        <tr>
+            <td class="flight__time">14:00</td>
+            <td class="flight__direction">Москва</td>
+            <td class="flight__number">SU 038</td>
+            <td class="flight__terminal">D</td>
+        </tr>
+    </template>
+
+    <script src="backend.js"></script>
+    <script src="departure-flights.js"></script>
+</body>
+</html>
