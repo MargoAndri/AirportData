@@ -32,16 +32,20 @@ a {
     clip: rect(0 0 0 0);
 }
 
+.search__form {
+    position: relative;
+}
 
 .button {
     display: inline-block;
+
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
     text-transform: uppercase;
     text-align: center;
     vertical-align: middle;
-    color: #000000;
+    color: #283136;
     letter-spacing: 1px;
 
     border: none;
@@ -49,12 +53,12 @@ a {
 
 .button:hover,
 .button:focus {
-    color: #ffff00;
+    color: #5069ff;
     outline: none;
 }
 
 .button:active {
-    color: #ffff00;
+    color: #ffce1b;
     outline: none;
 }
 
@@ -75,14 +79,15 @@ input {
 .clear__search {
     position: absolute;
     content: "";
-    top: 110px;
-    left: 800px;
+    top: 0px;
+    right: 145px;
     width: 22px;
     height: 22px;
     font-size: 0;
     cursor: pointer;
     background-color: transparent;
     border: 0;
+    outline: none;
 }
 
 .clear__search::before,
@@ -106,7 +111,14 @@ input {
 
 .clear__search:hover::before,
 .clear__search:hover::after {
-    background-color: #ffff00;
+    background-color: #5069ff;
+    outline: none;
+}
+
+.clear__search:active::before,
+.clear__search:active::after {
+    background-color: #ffce1b;
+    outline: none;
 }
 
 .filter__flight__list {
@@ -133,7 +145,7 @@ input {
 
 .filter__flight__list a:hover,
 .filter__flight__list a:focus {
-    color: #ffff00;
+    color: #ffce1b;
 }
 
 .filter__flight__list a:active {
@@ -141,7 +153,7 @@ input {
 }
 
 .selected  {
-    color: #ffff00;
+    color: #ffce1b;
 }
 
 .search {

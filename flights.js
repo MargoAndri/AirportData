@@ -84,4 +84,31 @@
         renderFlight(searchFilter);
     });
 
+    document.addEventListener('keydown', function (evt) {
+        if (evt.code === 'Enter') {
+            evt.preventDefault();
+            var searchFilter = window.loadedFlights.filter(function (item) {
+                if (item.thread.number.includes(search.value)) {
+                    return true;
+                }
+            });
+            table.innerHTML = '';
+            renderFlight(searchFilter);
+        }
+    });
+
+    var clearSearch = document.querySelector('#clear');
+    clearSearch.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        search.value = '';
+        renderFlight(window.loadedFlights);
+    });
+
+    document.addEventListener('keydown', function (evt) {
+        if (evt.code === 'Escape') {
+            evt.preventDefault();
+            search.value = '';
+            renderFlight(window.loadedFlights);
+        }
+    })
 })();
