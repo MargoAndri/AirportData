@@ -26,6 +26,7 @@
             <form class="search__form visually__hidden">
                 <input type="text" placeholder="Поиск по номеру рейса" id="search">
                 <button class="button" type="submit" id="search__button">Искать</button>
+                <button class="clear__search" type="button">Очистить поиск</button>
             </form>
         </div>
         <div class="flights">
@@ -36,11 +37,11 @@
     </main>
 
     <template id="table__row">
-        <tr>
-            <td class="flight__time">14:00</td>
-            <td class="flight__direction">Москва</td>
-            <td class="flight__number">SU 038</td>
-            <td class="flight__terminal">D</td>
+        <tr class="flight__details__list">
+            <td class="flight__details flight__time">14:00</td>
+            <td class="flight__details flight__direction">Москва</td>
+            <td class="flight__details flight__number">SU 038</td>
+            <td class="flight__details flight__terminal">D</td>
         </tr>
     </template>
 

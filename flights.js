@@ -51,7 +51,6 @@
     departureFlightLink.addEventListener('click', function (evt) {
         evt.preventDefault();
         table.innerHTML = '';
-        //arrivalFlightsLink.classList.remove('selected');
         departureFlightLink.classList.add('selected');
         window.backend.loadDepartures(onSuccessLoaded, console.log);
         showSearchForm();
