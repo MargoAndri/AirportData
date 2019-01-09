@@ -52,6 +52,7 @@
         evt.preventDefault();
         table.innerHTML = '';
         departureFlightLink.classList.add('selected');
+        arrivalFlightsLink.classList.remove('selected');
         window.backend.loadDepartures(onSuccessLoaded, console.log);
         showSearchForm();
     });
@@ -61,6 +62,7 @@
         evt.preventDefault();
         table.innerHTML = '';
         arrivalFlightsLink.classList.add('selected');
+        departureFlightLink.classList.remove('selected');
         window.backend.loadArrivals(onSuccessLoaded, console.log);
         showSearchForm();
     });

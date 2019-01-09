@@ -152,7 +152,7 @@ input {
     color: #000000;
 }
 
-.selected  {
+a.selected  {
     color: #ffce1b;
 }
 
