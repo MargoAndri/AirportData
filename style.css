@@ -14,6 +14,10 @@ body {
     color: #283136;
 }
 
+a {
+    text-decoration: none;
+}
+
 .visually__hidden {
     position: absolute;
     width: 1px;
@@ -26,4 +30,102 @@ body {
     clip-path: inset(100%);
     overflow: hidden;
     clip: rect(0 0 0 0);
+}
+
+
+.button {
+    display: inline-block;
+    padding: 5px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+    letter-spacing: 1px;
+
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    color: #ffff00;
+    outline: none;
+}
+
+.button:active {
+    color: #ffff00;
+    outline: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    padding: 0;
+    width: auto;
+    min-width: 300px;
+    border-bottom: 1px solid #283136;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.filter__flight__list {
+    display: flex;
+    width: 1200px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 40px;
+
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    list-style: none;
+    letter-spacing: 1px;
+}
+
+.filter__flight__list a {
+    color: #000000;
+}
+
+.filter__flight__list a:hover,
+.filter__flight__list a:focus {
+    color: #ffff00;
+}
+
+.filter__flight__list a:active {
+    color: #ffff00;
+}
+
+.selected  {
+    color: #ffff00;
+}
+
+.search {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+tr {
+    border-bottom: 2px solid #283136;
+}
+
+td {
+    padding: 10px;
 }

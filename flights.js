@@ -41,19 +41,29 @@
         table.appendChild(fragment);
     };
 
+    var searchForm = document.querySelector('.search__form');
+    var showSearchForm = function () {
+        searchForm.classList.remove('visually__hidden');
+    };
+
     var departureFlightLink = document.querySelector('#departure');
     var table = document.querySelector('.flights__table');
     departureFlightLink.addEventListener('click', function (evt) {
         evt.preventDefault();
         table.innerHTML = '';
+        //arrivalFlightsLink.classList.remove('selected');
+        departureFlightLink.classList.add('selected');
         window.backend.loadDepartures(onSuccessLoaded, console.log);
+        showSearchForm();
     });
 
     var arrivalFlightsLink = document.querySelector('#arrival');
     arrivalFlightsLink.addEventListener('click', function (evt) {
         evt.preventDefault();
         table.innerHTML = '';
+        arrivalFlightsLink.classList.add('selected');
         window.backend.loadArrivals(onSuccessLoaded, console.log);
+        showSearchForm();
     });
 
     var onSuccessLoaded = function (flights) {
