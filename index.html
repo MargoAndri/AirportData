@@ -12,6 +12,8 @@
         <div class="main">
             <h1 class="main__title visually__hidden">Табло рейсов</h1>
         </div>
+
+        <!-- Фильтры рейсов -->
         <div class="filter">
             <ul class="filter__flight__list">
                 <li class="flight__type">
@@ -22,6 +24,8 @@
                 </li>
             </ul>
         </div>
+
+        <!-- Поиск по номеру рейса -->
         <div class="search">
             <form class="search__form visually__hidden">
                 <input type="text" placeholder="Поиск по номеру рейса" id="search">
@@ -29,6 +33,8 @@
                 <button class="clear__search" type="button" id="clear">Очистить поиск</button>
             </form>
         </div>
+
+        <!-- Таблица рейсов -->
         <div class="flights">
             <table class="flights__table">
             </table>
@@ -36,6 +42,7 @@
 
     </main>
 
+    <!-- Инфрмация по выбранным рейсам -->
     <template id="table__row">
         <tr class="flight__details__list">
             <td class="flight__details flight__time">14:00</td>
